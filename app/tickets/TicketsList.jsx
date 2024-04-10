@@ -1,7 +1,7 @@
 async function getTickets() {
   const response = await fetch('http://localhost:4000/tickets', {
   next: {
-    revalidate: 30
+    revalidate: 0 // use 0 to opt-out of using revalidate and cache
   }
   });
   return response.json();
