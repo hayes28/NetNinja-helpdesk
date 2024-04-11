@@ -3,7 +3,7 @@ import { notFound } from "next/navigation"
 export const dynamicParams = true // default val = true
 
 export async function generateStaticParams() {
-  const res = await fetch('http://localhost:4000/tickets')
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/tickets`)
 
   const tickets = await res.json()
 
@@ -15,8 +15,8 @@ export async function generateStaticParams() {
 async function getTicket(id) {
   // imitate delay
   await new Promise((resolve) => setTimeout(resolve, 3000))
-  
-  const res = await fetch(`http://localhost:4000/tickets/${id}`, {
+
+  const res = await fetch(`${ process.env.NEXT_PUBLIC_API_URL }/tickets${id}`, {
     next: {
       revalidate: 60
     }
