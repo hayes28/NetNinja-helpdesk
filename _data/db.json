@@ -27,6 +27,13 @@
       "body": "This is a great ticket",
       "priority": "high",
       "user_email": "mario@netninja.dev"
+    },
+    {
+      "id": "3460",
+      "title": "Yay",
+      "body": "Finished",
+      "priority": "low",
+      "user_email": "mario@netninja.dev"
     }
   ]
 }
